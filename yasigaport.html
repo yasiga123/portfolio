@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yasiga Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <h1 class="logo">Yasiga's Portfolio</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-content">
+      <h2>Welcome to My Portfolio</h2>
+      <p>Hi, I’m Yasiga — a student developer turning ideas into simple, helpful solutions.</p>
+      <a href="#projects" class="btn">Discover My Work</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <img src="C:\Users\yasiga arasu\OneDrive\Pictures\Gemini\copy.png" alt="My Photo" class="about-img">
+      <p>Hello! I am Yasiga E T, a passionate student driven by curiosity and creativity. I love exploring innovative ideas that can make a positive impact and enjoy turning them into practical solutions through coding. With strong skills in HTML, CSS, JavaScript, and Java, I focus on building projects that are not only functional but also visually engaging. My goal is to combine technical expertise with thoughtful design to create work that is both helpful and inspiring. I believe in continuous learning, and every project I take on is an opportunity to grow, experiment, and contribute something meaningful.</p>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnoBdoDRIZt2Ni11dGzPGaU3NL38HSqrO5Vg&s" alt="Waste Management Project">
+          <h3>Sensor based waste management</h3>
+          <p>My project is a waste segregation system based on sensors. It uses different types of sensors to automatically identify and separate waste into categories such as biodegradable, recyclable, and non-recyclable. For example, infrared sensors can detect moisture to distinguish organic waste, while metal sensors identify metallic items. Once detected, the system directs the waste into the correct bin using simple mechanical or automated mechanisms. This approach reduces human effort, improves efficiency, and supports eco‑friendly waste management by ensuring proper disposal and recycling.</p>
+        </div>
+        <div class="project-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLfopc5AemRpUdKaU7vSGLHPDPx3p9sEw5aw&s" alt="Bus Scheduling Project">
+          <h3>Automated bus scheduling</h3>
+          <p>My project is an automated bus scheduling system for college. It uses software and simple algorithms to plan bus routes and timings based on student needs, class schedules, and bus capacity. The system reduces manual effort by automatically assigning buses to routes, optimizing travel time, and ensuring efficient use of resources. With features like real‑time updates and easy adjustments, it helps improve punctuality, minimize waiting time, and provide a smoother transportation experience for students and staff.</p>
+        </div>
+        <div class="project-card">
+          <img src="https://pub.mdpi-res.com/sustainability/sustainability-14-00210/article_deploy/html/images/sustainability-14-00210-g001.png?1640507480" alt="Accident Alert Project">
+          <h3>Automated accident alert system</h3>
+          <p>My project is an automated accident alert system in buses. It uses sensors to detect sudden impacts, unusual vibrations, or emergency conditions inside the vehicle. When an accident occurs, the system automatically sends an alert message with details such as bus location and time to nearby hospitals, police stations, and college authorities. This ensures quick response, reduces delays in rescue operations, and improves passenger safety. By combining sensor technology with communication modules, the system provides a reliable way to handle emergencies efficiently.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li onclick="showSkill('htmlcss')">HTML & CSS</li>
+        <li onclick="showSkill('javascript')">JavaScript</li>
+        <li onclick="showSkill('java')">Java</li>
+        <li onclick="showSkill('webdev')">Web Development</li>
+      </ul>
+
+      <!-- Skill Description Box -->
+      <div id="skill-description" class="skill-description">
+        <p>Click on a skill to learn more about it.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>Email: <a href="mailto:yasigalove@gmail.com">yasigalove@gmail.com</a></p>
+      <p>Phone: <a href="tel:+918144904222">+91 81449 04222</a></p>
+
+      <!-- Contact Form -->
+      <form action="#" method="post" class="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2025 Yasiga Portfolio. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Script for Skills -->
+  <script>
+    function showSkill(skill) {
+      let description = "";
+
+      switch(skill) {
+        case "htmlcss":
+          description = "HTML & CSS are the building blocks of web design. HTML structures content, while CSS styles it with colors, layouts, and fonts.";
+          break;
+        case "javascript":
+          description = "JavaScript adds interactivity to websites. It powers dynamic features like animations, form validation, and responsive behavior.";
+          break;
+        case "java":
+          description = "Java is a versatile programming language used for building applications, from desktop software to Android apps and enterprise systems.";
+          break;
+        case "webdev":
+          description = "Web Development combines coding, design, and problem-solving to create functional, user-friendly websites and applications.";
+          break;
+      }
+
+      document.getElementById("skill-description").innerHTML = "<p>" + description + "</p>";
+    }
+  </script>
+
+</body>
+</html>
